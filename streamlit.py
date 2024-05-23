@@ -103,7 +103,7 @@ for deduction_name, value in selected_deductions.items():
         taxable_income -= value  # Replace with actual deduction calculation
 # F&O tax treatment (replace with actual logic)
 
-  fno_tax_rate = 0.0  # Placeholder
+  #fno_tax_rate = 0.0  # Placeholder
 
 if fno_income > 0:
     # Check for specific F&O contract types (e.g., equity options, currency futures)

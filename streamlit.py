@@ -83,4 +83,6 @@ for deduction_name, _ in optional_deductions.items():
     selected_deductions[deduction_name] = st.checkbox(deduction_description)
 
 # User input for short-term capital gains (optional)
-short_term_capital_gains = st.number_input("Enter Short-Term Capital Gains (₹)", min_value=0.
+short_term_capital_gains = st.number_input("Enter Short-Term Capital Gains (₹)", min_value=0.00)
+
+# User input for long-term capital gains (optional)

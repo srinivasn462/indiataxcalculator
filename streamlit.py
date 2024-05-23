@@ -112,7 +112,7 @@ if fno_income > 0:
 
     # Example (replace with actual rates based on your research):
     fno_tax_rate = 0.1  # Placeholder for short-term F&O gains
-    if holding_period > 1 year:
+  if holding_period > 1 year:
         fno_tax_rate = 0.05 
         
 # Add capital gains and F&O income (placeholder for F&O)

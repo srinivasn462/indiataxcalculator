@@ -102,7 +102,8 @@ for deduction_name, value in selected_deductions.items():
     if value:
         taxable_income -= value  # Replace with actual deduction calculation
 # F&O tax treatment (replace with actual logic)
-fno_tax_rate = 0.0  # Placeholder
+
+  fno_tax_rate = 0.0  # Placeholder
 
 if fno_income > 0:
     # Check for specific F&O contract types (e.g., equity options, currency futures)
@@ -111,8 +112,8 @@ if fno_income > 0:
 
     # Example (replace with actual rates based on your research):
     fno_tax_rate = 0.1  # Placeholder for short-term F&O gains
-   if holding_period > 1 year:  # Replace with actual holding period check
-    fno_tax_rate = 0.05
+    if holding_period > 1 year:
+        fno_tax_rate = 0.05 
         
 # Add capital gains and F&O income (placeholder for F&O)
 #taxable_income += short_term_capital_gains * capital_gains_tax_rates["Short-term capital gains"]

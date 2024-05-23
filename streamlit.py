@@ -10,6 +10,11 @@ new_tax_slabs = {
     "₹12 lakhs to ₹15 lakhs": 0.3,
     "Above ₹15 lakhs": 0.3
 }
+capital_gains_tax_rates = {
+    "Short-term capital gains (< 1 year)": 0.1,  # Placeholder, update with actual rate
+    "Long-term capital gains (> 1 year)": 0.2,  # Placeholder, update with actual rate
+}
+
 
 # Old Tax Regime slabs (replace placeholders with actual rates if available)
 old_tax_slabs = {

@@ -103,7 +103,7 @@ for deduction_name, value in selected_deductions.items():
         taxable_income -= value  # Replace with actual deduction calculation
 
 # Add capital gains and F&O income (placeholder for F&O)
-taxable_income += short_term_capital_gains * capital_gains_tax_rates["Short-term capital gains"]
+#taxable_income += short_term_capital_gains * capital_gains_tax_rates["Short-term capital gains"]
 taxable_income += fno_income * fno_tax_rate  # Placeholder, update with actual F&O tax treatment
 
 # Calculate tax based on selected regime (replace placeholders with actual slabs and rates)

@@ -86,3 +86,44 @@ for deduction_name, _ in optional_deductions.items():
 short_term_capital_gains = st.number_input("Enter Short-Term Capital Gains (₹)", min_value=0.00)
 
 # User input for long-term capital gains (optional)
+# User input for F&O income (optional)
+fno_income = st.number_input("Enter F&O Income (₹)", min_value=0.00)
+
+# Calculate taxable income
+taxable_income = annual_income - standard_deductions[selected_category]
+
+# Apply selected deductions (replace placeholders with actual calculation logic)
+for deduction_name, value in selected_deductions.items():
+    if value:
+        taxable_income -= value  # Replace with actual deduction calculation
+
+# Add capital gains and F&O income (placeholder for F&O)
+taxable_income += short_term_capital_gains * capital_gains_tax_rates["Short-term capital gains"]
+taxable_income += fno_income * fno_tax_rate  # Placeholder, update with actual F&O tax treatment
+
+# Calculate tax based on selected regime (replace placeholders with actual slabs and rates)
+tax_amount = 0
+if selected_regime == "New Tax Regime":
+    for slab, rate in new_tax_slabs.items():
+        if taxable_income <= float(slab.split()[0].replace("₹", "")):
+            tax_amount += (taxable_income * rate)
+            break
+        else:
+            taxable_income -= float(slab.split()[0].replace("₹", ""))
+            tax_amount += (float(slab.split()[0].replace("₹", "")) * rate)
+else:
+    # Similar logic for Old Tax Regime (update with actual slabs and rates)
+    pass
+
+# Apply tax surcharge if applicable
+if taxable_income > 50000000:
+    tax_amount += tax_amount * tax_surcharge["Above ₹5 crore"]
+
+# Display final tax payable
+st.subheader("Your Estimated Tax Payable (₹)")
+st.write(f"{tax_amount:.2f}")
+
+# Disclaimer (add details as needed)
+st.info(
+    "Disclaimer: This is an estimated tax calculation tool. Please consult a tax professional for accurate tax advice."
+)
